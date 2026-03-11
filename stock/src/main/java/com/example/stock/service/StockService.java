@@ -17,7 +17,7 @@ public class StockService {
     수평적확대로 처리된 서버 2개 이상에 처리되면 데이터 접근을 여러대에서 접근가능해진다
  */
     @Transactional(propagation = Propagation.REQUIRES_NEW)
-    public synchronized void decrease(Long id, Long quantity){
+    public void decrease(Long id, Long quantity){
         //Stock 조회
         //재고를 감소
         //갱신된 값을 저장
