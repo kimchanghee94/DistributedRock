@@ -11,7 +11,7 @@ import lombok.Data;
 public class Stock {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
     private Long productId;
     private Long quantity;
 
@@ -21,7 +21,7 @@ public class Stock {
         this.quantity = quantity;
     }
 
-    public void decreate(Long quantity){
+    public void decrease(Long quantity){
         if (this.quantity - quantity<0){
             throw new RuntimeException("재고는 0개 미만이 될 수 없습니다;");
         }
