@@ -11,8 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 public class StockService {
     private final StockRepository stockRepository;
 
-    @Transactional
-    public void decrease(Long id, Long quantity){
+//    @Transactional
+    public synchronized void decrease(Long id, Long quantity){
         //Stock 조회
         //재고를 감소
         //갱신된 값을 저장
